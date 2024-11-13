@@ -28,16 +28,16 @@ public class Main {
         // If no output format is specified, generate both reports by default
         if (!outputFormat.isPresent() || outputFormat.get().isEmpty()) {
             // Generate both CSV and HTML reports
-            csvGenerator.generateReport(reportInput, conn,   databaseDataSource);
-            htmlGenerator.generateReport(reportInput, conn,  databaseDataSource);
+            csvGenerator.generateReport(reportInput, conn,  databaseDataSource);
+            htmlGenerator.generateReport(reportInput, conn, databaseDataSource);
         }
         // If CSV is selected
         else if (outputFormat.get().equals("csv")) {
-            csvGenerator.generateReport(reportInput, conn,  databaseDataSource);
+            csvGenerator.generateReport(reportInput, conn, databaseDataSource);
         }
         // If HTML is selected
         else if (outputFormat.get().equals("html")) {
-            htmlGenerator.generateReport(reportInput, conn,databaseDataSource);
+            htmlGenerator.generateReport(reportInput, conn, databaseDataSource);
         }
     }
 }

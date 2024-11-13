@@ -21,14 +21,7 @@ public class Course {
         this.timeCreated = timeCreated;
     }
 
-    // Additional constructor without `id` and `timeCreated` for new entries
-    public Course(String name, Duration totalTime, int credit, int instructorId) {
-        this.name = name;
-        this.totalTime = totalTime;
-        this.credit = credit;
-        this.instructorId = instructorId;
-        this.timeCreated = LocalDateTime.now(); // Set to current time
-    }
+
 
     // Getters
     public String getId() {

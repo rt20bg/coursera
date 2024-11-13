@@ -24,8 +24,10 @@ public class Student {
         this.timeCreated = timeCreated;
     }
 
-    public void addCourse(String courseName, Duration totalTime, int credit, int instructorName) {
-        Course course = new Course(courseName, totalTime, credit, instructorName);
+    public void addCourse(String ID, String courseName, Duration totalTime, int credit, int instructorName) {
+
+
+        Course course = new Course(ID, courseName, totalTime, credit, instructorName, timeCreated);
         this.courses.add(course);
         this.totalCredit += credit;
     }
